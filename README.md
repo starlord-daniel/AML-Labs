@@ -22,6 +22,6 @@ For an introduction to Azure Machine Learning please visit the official [What is
 
 ### 3. Sloth recognition
 
-    ![Sloth Croissant](images/sloth_croissant.jpg)
+![Sloth Croissant](images/sloth_croissant.jpg)
 
     In this example we check, if an image contains the majestic animal called sloth (see image below). We use a neural network to train on images of sloths and croissants (and other things) 
