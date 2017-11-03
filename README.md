@@ -1,2 +1,17 @@
 # AML-Labs
-Labs for Azure Machine Learning
+
+![Azure Machine Learning Service](https://azurecomcdn.azureedge.net/cvt-956b36a638bfd60f82a686d0ba9e27b65b0ef86f4c1a56933df12560718f43fb/images/page/overview/machine-learning/machine-learning-diagram.svg)
+
+Labs for Azure Machine Learning based largely on examples and code from the [Azure Machine Learning Documentation](https://docs.microsoft.com/en-us/azure/machine-learning/preview/)
+
+## Labs 
+
+0. AML Setup
+
+    The seup required to make use of the Azure Machine Learning service.
+
+1. AML Titanic Example
+
+    This example is based on actual data from the Titanic catastrophe. In this example a classification algorithm is built that is able to predict, if a fictual person would have survived the Titanic accident.
+
+
