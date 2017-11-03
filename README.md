@@ -8,7 +8,7 @@ For an introduction to Azure Machine Learning please visit the official [What is
 
 ## AML Setup
 
-    The seup required to make use of the Azure Machine Learning service. This is provided through the official [Install and create](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation) documentation
+The seup required to make use of the Azure Machine Learning service. This is provided through the official [Install and create](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation) documentation
 
 ## Labs 
 
@@ -24,4 +24,4 @@ To predict possible flight delays, a regression model is trained real world data
 
 ![Sloth Croissant](images/sloth_croissant.jpg)
 
-    In this example we check, if an image contains the majestic animal called sloth (see image below). We use a neural network to train on images of sloths and croissants (and other things) 
+In this example we check, if an image contains the majestic animal called sloth (see image below). We use a neural network to train on images of sloths and croissants (and other things) 
