@@ -14,11 +14,11 @@ For an introduction to Azure Machine Learning please visit the official [What is
 
 ### 1. AML Titanic Example
 
-    This example is based on actual data from the Titanic catastrophe. In this example a classification algorithm is built that is able to predict, if a fictual person would have survived the Titanic accident.
+This example is based on actual data from the Titanic catastrophe. In this example a classification algorithm is built that is able to predict, if a fictual person would have survived the Titanic accident.
 
 ### 2. Flight Delay Prediction
 
-    To predict possible flight delays, a regression model is trained real world data from flights all over the world.
+To predict possible flight delays, a regression model is trained real world data from flights all over the world.
 
 ### 3. Sloth recognition
 
