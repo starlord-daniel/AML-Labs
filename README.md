@@ -14,9 +14,13 @@ The seup required to make use of the Azure Machine Learning service. This is pro
 
 ### 1. AML Titanic Example
 
+![Titanic](images/titanic.jpg)
+
 This example is based on actual data from the Titanic catastrophe. In this example a classification algorithm is built that is able to predict, if a fictual person would have survived the Titanic accident.
 
 ### 2. Flight Delay Prediction
+
+![Planes](images/planes.jpeg)
 
 To predict possible flight delays, a regression model is trained real world data from flights all over the world.
 
@@ -24,4 +28,4 @@ To predict possible flight delays, a regression model is trained real world data
 
 ![Sloth Croissant](images/sloth_croissant.jpg)
 
-In this example we check, if an image contains the majestic animal called sloth (see image below). We use a neural network to train on images of sloths and croissants (and other things) 
+In this example we check, if an image contains the majestic animal called sloth (see image above). We use a neural network to train on images of sloths and croissants (and other things).
