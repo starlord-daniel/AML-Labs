@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 39,
+  "id": "c8b045bd-54a2-4a63-ba50-e68655c74d59",
+  "activities": [
+    {
+      "id": "9d0ef0fe-14b2-4e81-9da2-4ac816571483",
+      "name": "titanic-dataset",
+      "blocks": [
+        {
+          "id": "c15d1321-f638-4839-930e-4139cd33dfa0",
+          "type": "Microsoft.DPrep.DataSourceBlock",
+          "arguments": {
+            "path": {
+              "target": 0,
+              "resourceDetails": [
+                {
+                  "path": "./data/titanic-dataset.csv"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "974afe6f-109a-4144-91a6-f7de4ac3f67c",
+          "type": "Microsoft.DPrep.ParseDelimitedBlock",
+          "arguments": {
+            "preview": false,
+            "columnHeadersMode": 1,
+            "separator": ",",
+            "fileEncoding": 0,
+            "skipRowsMode": 0,
+            "handleQuotedLineBreaks": false
+          }
+        },
+        {
+          "id": "4b5af2eb-62f3-4095-93d5-22f5bd4905a4",
+          "type": "Microsoft.DPrep.SetColumnTypesBlock",
+          "arguments": {
+            "columnConversion": [
+              {
+                "columnId": "fare",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "survived",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "pclass",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "age",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "parch",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "sibsp",
+                "typeProperty": 3,
+                "typeArguments": {}
+              },
+              {
+                "columnId": "body",
+                "typeProperty": 3,
+                "typeArguments": {}
+              }
+            ]
+          }
+        },
+        {
+          "id": "1c11f83c-f1c8-4d14-b1d4-1b7e5274023e",
+          "type": "Microsoft.DPrep.SampleBlock",
+          "arguments": {
+            "samples": [
+              {
+                "sampleId": "c44d4af8-420e-4b37-bbe1-912e97ea9983",
+                "sampleRevision": "2d7f3c4a-ea8b-4eef-b4e0-17a61c9647a2",
+                "sampleName": "Top 10000",
+                "sampleRunner": {
+                  "id": null,
+                  "type": 0
+                },
+                "remoteGeneratorProperties": {},
+                "sampleStrategy": 0,
+                "topArguments": {
+                  "sampleCount": 10000
+                },
+                "randomNArguments": {
+                  "sampleCount": 10000
+                },
+                "randomPercentArguments": {
+                  "probability": 0.1
+                },
+                "allowAutoGen": true,
+                "isDisabled": false
+              }
+            ],
+            "activeSample": "c44d4af8-420e-4b37-bbe1-912e97ea9983"
+          }
+        },
+        {
+          "id": "c4b8c74f-508b-43f7-b6eb-c670d42e8c62",
+          "type": "Microsoft.DPrep.HandlePathColumnBlock",
+          "arguments": {
+            "pathColumnOperation": 0
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "fc3e9850-0b33-45d0-a75a-c7a37d37f6c6",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "9d0ef0fe-14b2-4e81-9da2-4ac816571483",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}

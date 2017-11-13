@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 39,
+  "id": "c99c1bae-7716-4e50-8210-1f19f9e1bc9e",
+  "activities": [
+    {
+      "id": "9b9b85cd-06f5-408c-8dd3-521cc91a54d7",
+      "name": "titanic-dataset",
+      "blocks": [
+        {
+          "id": "9820ac7c-2965-48fb-b663-81580e3738e3",
+          "type": "Microsoft.DPrep.ReferenceActivityBlock",
+          "arguments": {
+            "reference": {
+              "referenceType": 1,
+              "referenceContainerPath": "./titanic-dataset.dsource",
+              "referencedActivityId": "9d0ef0fe-14b2-4e81-9da2-4ac816571483",
+              "referencedBranchId": null,
+              "referencedStep": null,
+              "anonymousSteps": null
+            }
+          }
+        },
+        {
+          "id": "851a8b13-c9b4-40a5-b021-2262ad69356b",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "name"
+            ]
+          }
+        },
+        {
+          "id": "98adc3e8-287c-4629-89c6-c73efa989af3",
+          "type": "Microsoft.DPrep.FilterNumberColumnBlock",
+          "arguments": {
+            "columnId": "pclass",
+            "filterResult": 1,
+            "clauseRelationship": 0,
+            "clauses": [
+              {
+                "operator": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "4237bc48-8af9-4f56-b2ee-ed6655e6a800",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "ticket"
+            ]
+          }
+        },
+        {
+          "id": "df176b8e-b32f-4880-a973-d7e0b9c91432",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "embarked"
+            ]
+          }
+        },
+        {
+          "id": "5472261f-d587-4020-9469-476c176fb8c1",
+          "type": "Microsoft.DPrep.DeleteColumnBlock",
+          "arguments": {
+            "columnIds": [
+              "cabin",
+              "boat",
+              "body",
+              "home.dest"
+            ]
+          }
+        },
+        {
+          "id": "9fba210b-f1f7-422c-baf8-b9350a763ba9",
+          "type": "Microsoft.DPrep.ReplaceValuesBlock",
+          "arguments": {
+            "valueToFind": "female",
+            "replaceWith": "1",
+            "matchEntireCellContents": false,
+            "useSpecialCharacters": false,
+            "columnIds": [
+              "sex"
+            ],
+            "replaceWithNone": false
+          }
+        },
+        {
+          "id": "d9eff02a-46e2-4e19-a951-bbe9f432a07c",
+          "type": "Microsoft.DPrep.ReplaceValuesBlock",
+          "arguments": {
+            "valueToFind": "male",
+            "replaceWith": "0",
+            "matchEntireCellContents": false,
+            "useSpecialCharacters": false,
+            "columnIds": [
+              "sex"
+            ],
+            "replaceWithNone": false
+          }
+        },
+        {
+          "id": "57150554-1edd-48f2-acf2-a177e365c422",
+          "type": "Microsoft.DPrep.ConvertColumnFieldTypeBlock",
+          "arguments": {
+            "columnIds": [
+              "sex"
+            ],
+            "decimalPoint": 0
+          }
+        },
+        {
+          "id": "18479728-6fe8-4a73-a0fe-7849b0ff2949",
+          "type": "Microsoft.DPrep.FilterNumberColumnBlock",
+          "arguments": {
+            "columnId": "age",
+            "filterResult": 1,
+            "clauseRelationship": 1,
+            "clauses": [
+              {
+                "operator": 2
+              }
+            ]
+          }
+        },
+        {
+          "id": "3d161a59-31fe-4f52-8fda-f30aff9c4e3e",
+          "type": "Microsoft.DPrep.AdjustColumnPrecisionBlock",
+          "arguments": {
+            "decimalPlaces": 0,
+            "columnId": "age"
+          }
+        },
+        {
+          "id": "f5e13053-dcac-42ab-a74b-6c68b2cc8aef",
+          "type": "Microsoft.DPrep.AdjustColumnPrecisionBlock",
+          "arguments": {
+            "decimalPlaces": 0,
+            "columnId": "fare"
+          }
+        },
+        {
+          "id": "d9c404b0-5d70-475f-a749-289d01a7a3be",
+          "type": "Microsoft.DPrep.FilterNumberColumnBlock",
+          "arguments": {
+            "columnId": "fare",
+            "filterResult": 1,
+            "clauseRelationship": 1,
+            "clauses": [
+              {
+                "operator": 2
+              }
+            ]
+          }
+        }
+      ],
+      "inspectors": [
+        {
+          "id": "ed8f960b-fd19-470c-bb1e-b0d9f9f064e2",
+          "type": "Microsoft.DPrep.DataQualityInspector",
+          "arguments": {},
+          "reference": {
+            "referenceType": 0,
+            "referenceContainerPath": null,
+            "referencedActivityId": "9b9b85cd-06f5-408c-8dd3-521cc91a54d7",
+            "referencedBranchId": null,
+            "referencedStep": {
+              "stepReferenceType": 1,
+              "referencedStepId": null,
+              "fallback": 1
+            },
+            "anonymousSteps": null
+          },
+          "isBackground": false
+        }
+      ]
+    }
+  ],
+  "runConfigurations": []
+}
