@@ -12,7 +12,7 @@ The seup required to make use of the Azure Machine Learning service. This is pro
 
 ## Labs 
 
-### 1. AML Titanic Example
+### [1. AML Titanic Example](/1-AML-Titanic)
 
 <a href="/1-AML-Titanic"><img src="images/titanic.jpg"></img></a>
 
