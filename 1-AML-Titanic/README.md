@@ -2,16 +2,25 @@
 
 This example is based on actual data from the Titanic catastrophe. In this example a classification algorithm is built that is able to predict, if a fictual person would have survived the Titanic accident.
 
-#### Overview?
-Anchor Links in MD
+## Overview
+1. [Prerequisites](#Prerequisites)
+2. [Setup](#Setup)
+3. [Get your Data in place](#GetyourDatainplace)
+4. [Data Exploration](#DataExploration)
+5. [Data Preparation](#DataPreparation)
+6. [Develop the Model](#DeveloptheModel)
+7. [Run your Python Script](#RunyourPythonScript)
+8. [Check Results](#CheckResults)
+9. [Deploy your Model](#DeployyourModel)
+10. [Deploy the model in the cloud](#Deploythemodelinthecloud)
 
-## Prerequisites
+## <a name="Prerequisites"></a>Prerequisites
 * Create an Azure Machine Learning Experimentation account.
 * Azure Machine Learning Workbench installed
 
 You can follow the instructions in the [Install and create Quickstart](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation) article to install the Azure Machine Learning Workbench application.
 
-## Setup
+## <a name="Setup"></a>Setup
 1. Start of by cloning the [repository](https://github.com/starlord-daniel/AML-Labs) on your local machine.
 2. The files needed for the experiment are located under **1-AML-Titanic**
 3. Open **Azure Machine Learning Workbench** and add the project to your workspace
@@ -23,8 +32,8 @@ You can follow the instructions in the [Install and create Quickstart](https://d
 
 After setting up your project you should see the dashboard of the project.
 
-## Get your Data in place
-Preparing the data is one of the key steps for your first ML experiment. This step includes renaming of columns, filtering (e.g. removing *null* values), transforming values and changing the data type.
+## <a name="GetyourDatainplace"></a>Get your Data in place
+Preparing the data is one of the key steps for your first ML experiment. This step includes renaming of columns, filtering (e.g. removing *null* val]ues), transforming values and changing the data type.
 
 - To begin the process, add your dataset [**titanic.csv**](data/titanic-dataset.csv) as a new Data Source to the experiment and follow the steps.
 
@@ -32,7 +41,7 @@ Preparing the data is one of the key steps for your first ML experiment. This st
 
     (**Please note:** The project you cloned already has a fully prepared dataset included. However, to get a glimpse of how things work we recommend to try it out on your own.)
 
-## Data Exploration
+## <a name="DataExploration"></a>Data Exploration
 In the **titanic.csv** file you can find the data imported and used in the model creation. Before we get started with preparing the data for the experiment, let's have a quick look at what the data is about.
 
 | Variable | Definition | Type |
@@ -56,7 +65,7 @@ To get to know your data even better by exploring certain statistical figures cl
 
 ![Data Exploration](assets/Data_Exploration_2.PNG )
 
-### Data Preparation
+### <a name="DataPreparation"></a>Data Preparation
 Now it's time to get our hands dirty and prepare our data. The following steps are about getting rid of data we don't need, removing incomplete data and transforming data types, but let's take one step after the other:
 
 1. To start off, create a new Preparation file
@@ -92,7 +101,7 @@ Now it's time to get our hands dirty and prepare our data. The following steps a
 
     - For more information on how to prepare data in Azure Machine Learning Workbench, see the [Get started with data preparation guide](https://docs.microsoft.com/en-us/azure/machine-learning/preview/data-prep-getting-started).
 
-## Develop the Model
+## <a name="DeveloptheModel"></a>Develop the Model
 At this stage we have our data sources configured and prepared for the fun part you've probably been waiting for - developing the ML model.
 To make things a little bit easier, we already added the [train.py](train.py) file to the project. Open the file and try to make yourself familiar with the code.
 Basically the script performs the following steps:
@@ -112,7 +121,7 @@ f.close()
 
 The deserialized model, saved in the ouputs folder, can later be used to make a prediction on a new record but first things first.
 
-### Run your Python Script
+### <a name="RunyourPythonScript"></a>Run your Python Script
 We are now ready to run the script on your local computer. 
 - Select **local** as the execution target from the command bar near the top of the application, and select **train.py** as the script to run. There are other files included in the sample that we will check out later. 
 
@@ -122,7 +131,7 @@ We are now ready to run the script on your local computer.
 - The Jobs panel slides out from the right if it is not already visible, and an train job is added in the panel. Its status transitions from Submitting to Running as the job begins to run, and then to Completed in a few seconds. 
 - **Congratulations.** You have successfully executed a Python script in Azure Machine Learning Workbench.
 
-### Check Results
+### <a name="CheckResults"></a>Check Results
 After running the script 2-3 times feel free to check the results in the Jobs History.
 
 ![Script Results](assets/Script_Results.PNG )
@@ -132,7 +141,7 @@ The list of Jobs below show a historical list of the scrips you ran. By selectin
 
 ![Script Log](assets/Script_Log.PNG )
 
-## Deploy your Model
+## <a name="DeployyourModel"></a>Deploy your Model
 Before we can think about deploying our experiment we have to figure out, if our model actually works. Therefor, it is important to download and save the model, created by our train.py script. The model.pkl file is saved in the output section of the log.
 
 ![Script Log](assets/Script_Log.PNG )
@@ -152,7 +161,7 @@ To publish the model, we have to perform these actions:
     - after deployment, the service will provide you with options to call you service
 
 
-## [Optional] Deploy the model in the cloud
+## [Optional] <a name="Deploythemodelinthecloud"></a>Deploy the model in the cloud
 
 To upload the docker file to Azure, we just have to create a Web Service for Containers in Azure
 
