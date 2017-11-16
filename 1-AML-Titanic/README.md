@@ -76,11 +76,11 @@ Repeat this for the columns *fare* and *age*
 
 ![Replace Data](assets/Replace.PNG )
 
-Repeat this for male
+Repeat this for male.
 * To make *sex* a numeric value we only have to click on the column header and select the *numeric* option.
 * Last but not least we want to change the precision of the columns *age* and *fare*.
 
-The Azure Machine Learning Workbench shows you all the steps you performed in the *Steps* pane on the right side. There you can edit and revert to early stages. Great huh?
+The Azure Machine Learning Workbench shows you all the steps you performed in the *Steps* pane on the right side. There you can edit and revert to early stages. Pretty cool huh?
 
 ![Transform Data](assets/Transformation_Steps.PNG )
 
@@ -99,6 +99,13 @@ Basically the script performs the following steps:
 * Uses the scikit-learn machine learning library to build a logistic regression model. 
 * Serializes the model by inserting the pickle library into a file in the outputs folder. 
 * The run_logger object is used throughout to record the model accuracy into the logs. The logs are automatically plotted in the run history.
+
+```python
+print ("Export the model to model.pkl")
+f = open('./outputs/model.pkl', 'wb')
+pickle.dump(classification_model, f)
+f.close()
+```
 
 The deserialized model, saved in the ouputs folder, can later be used to make a prediction on a new record but first things first.
 
@@ -128,6 +135,14 @@ Before we can think about deploying our experiment we have to figure out, if our
 ![Script Log](assets/Script_Log.PNG )
 
 The file is used in our second script - [*score.py*](score.py). This file loads the model.pkl and tests it against a predefined dataframe. The result is a JSON-Object. You can find it in the Jobs history under the score.py section. Selecting a certain Job in the list will take you to a detailed overview (sounds familiar?).
+
+```python
+global model
+model = joblib.load('model.pkl')
+
+inputs_dc = ModelDataCollector("model.pkl", identifier="inputs")
+prediction_dc = ModelDataCollector("model.pkl", identifier="prediction")
+```
 
 You now have:
 * Setup Azure Machine Learning Workbench
