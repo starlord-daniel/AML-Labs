@@ -14,7 +14,7 @@ The seup required to make use of the Azure Machine Learning service. This is pro
 
 ### 1. AML Titanic Example
 
-![Titanic](images/titanic.jpg)
+<a href="/1-AML-Titanic"><img src="images/titanic.jpg"></img></a>
 
 This example is based on actual data from the Titanic catastrophe. In this example a classification algorithm is built that is able to predict, if a fictual person would have survived the Titanic accident.
 
