@@ -15,6 +15,9 @@ You can follow the instructions in the [Install and create Quickstart](https://d
 1. Start of by cloning the [repository](https://github.com/starlord-daniel/AML-Labs) on your local machine.
 2. The files needed for the experiment are located under *1-AML-Titanic*
 3. Open *Azure Machine Learning Workbench* and add the project to your workspace
+
+![Create Project](assets/Create_Project.PNG )
+
 4. Fill in the **Project name** and **Project directory** boxes. **Project description** is optional but helpful. Leave the Visualstudio.com GIT Repository URL box blank for now and choose a workspace (created in the [installation guide](https://docs.microsoft.com/en-us/azure/machine-learning/preview/quickstart-installation)).
 
 After setting up your project you should see the dashboard of the project.
@@ -56,17 +59,23 @@ To get to know your data even better by exploring certain statistical figures cl
 Now it's time to get our hands dirty and prepare our data. The following steps are about getting rid of data we don't need, removing incomplete data and transforming data types, but let's take one step after the other:
 
 * To start of create a new Preparation file
+
 ![Prepare Data](assets/Prepare_Data.PNG )
+
 * Select the Prepare button. The Prepare dialog box opens. 
 The sample project comes with an titanic-clear.dprep file. By default, it asks you to create a new data flow in the titanic-clear.dprep data preparation package that already exists. 
 Select + New Data Preparation Package from the drop-down menu, enter a new value for the package name, use titanic-clear-1, and then select OK.
 * Let's start with removing the columns we don't need. Therefore select the column "*name*" and click "remove". (right-click on the column head)
 Repeat this for the columns *teicket, embarked, cabin, boat, body* and *home.dest*
 * Next we filter the pclass for empty values
+
 ![Filter Data](assets/Filter.PNG )
+
 Repeat this for the columns *fare* and *age*
 * We also want *sex* to be a numeric value (female = 1, male = 0). To do so, we have to select "Replace Values"
+
 ![Replace Data](assets/Replace.PNG )
+
 Repeat this for male
 * To make *sex* a numeric value we only have to click on the column header and select the *numeric* option.
 * Last but not least we want to change the precision of the columns *age* and *fare*.
