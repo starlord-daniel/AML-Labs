@@ -163,12 +163,24 @@ To publish the model, we have to perform these actions:
 
 ## [Optional] <a name="Deploythemodelinthecloud"></a>Deploy the model in the cloud
 
-To upload the docker file to Azure, we just have to create a Web Service for Containers in Azure
+To upload the docker file to Azure, we just have to create a Web Service for Containers in Azure. As the last command (deploy web service in one command) created a Docker image and also an Azure Container Registry, this is fairly easy to do:
+
+1. Log in to the Azure portal and search for "Web App for Containers"
+
+2. Create the Web App and configure your container. This is quite staightforward, as you just have to choose the one, that is already created for you.
+
+    ![WebApp Deployment](assets/webapp1.png)
+
+3. Save the settings and create the service
+
+4. After setting up the service, wait some time (depending on model size) until it is ready. Now you can call it via HTTP. You can use this [Jupyter notebook](titanic-classify.ipynb) to guide you through the call.
+
+5. [Optional]: Set the Always On option in the Application Settings of your App Service to "On". This way, the it is always ready and will not shut down, when unused.
 
 
 ## Summary:
 
-We have now: 
+What we did: 
 * Setup Azure Machine Learning Workbench
 * Created a project
 * Added a new Data Source

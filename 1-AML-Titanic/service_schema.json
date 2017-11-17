@@ -1,1 +1,50 @@
-{"input": {"input_df": {"type": 3, "internal": "gANjYXp1cmVtbC5hcGkuc2NoZW1hLnBhbmRhc1V0aWwKUGFuZGFzU2NoZW1hCnEAKYFxAX1xAihYDAAAAGNvbHVtbl9uYW1lc3EDXXEEKFgGAAAAcGNsYXNzcQVYAwAAAHNleHEGWAMAAABhZ2VxB1gFAAAAc2lic3BxCFgFAAAAcGFyY2hxCVgEAAAAZmFyZXEKZVgFAAAAc2hhcGVxC0sBSwaGcQxYDAAAAGNvbHVtbl90eXBlc3ENXXEOKGNudW1weQpkdHlwZQpxD1gCAAAAaThxEEsASwGHcRFScRIoSwNYAQAAADxxE05OTkr/////Sv////9LAHRxFGJoEmgSaBJoEmgSZVgKAAAAc2NoZW1hX21hcHEVfXEWKGgFaBJoCGgSaAdoEmgKaBJoBmgSaAloEnV1Yi4=", "swagger": {"type": "array", "items": {"type": "object", "properties": {"pclass": {"type": "integer", "format": "int64"}, "sibsp": {"type": "integer", "format": "int64"}, "age": {"type": "integer", "format": "int64"}, "fare": {"type": "integer", "format": "int64"}, "sex": {"type": "integer", "format": "int64"}, "parch": {"type": "integer", "format": "int64"}}}, "example": [{"pclass": 1, "sibsp": 1, "age": 29, "fare": 200, "sex": 1, "parch": 0}]}}}}
+{
+    "input": {
+        "input_df": {
+            "type": 3,
+            "internal": "gANjYXp1cmVtbC5hcGkuc2NoZW1hLnBhbmRhc1V0aWwKUGFuZGFzU2NoZW1hCnEAKYFxAX1xAihYDAAAAGNvbHVtbl9uYW1lc3EDXXEEKFgGAAAAcGNsYXNzcQVYAwAAAHNleHEGWAMAAABhZ2VxB1gFAAAAc2lic3BxCFgFAAAAcGFyY2hxCVgEAAAAZmFyZXEKZVgFAAAAc2hhcGVxC0sBSwaGcQxYDAAAAGNvbHVtbl90eXBlc3ENXXEOKGNudW1weQpkdHlwZQpxD1gCAAAAaThxEEsASwGHcRFScRIoSwNYAQAAADxxE05OTkr/////Sv////9LAHRxFGJoEmgSaBJoEmgSZVgKAAAAc2NoZW1hX21hcHEVfXEWKGgFaBJoCGgSaAdoEmgKaBJoBmgSaAloEnV1Yi4=",
+            "swagger": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "pclass": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "sibsp": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "age": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "fare": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "sex": {
+                            "type": "integer",
+                            "format": "int64"
+                        },
+                        "parch": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                },
+                "example": [
+                    {
+                        "pclass": 1,
+                        "sibsp": 1,
+                        "age": 29,
+                        "fare": 200,
+                        "sex": 1,
+                        "parch": 0
+                    }
+                ]
+            }
+        }
+    }
+}
