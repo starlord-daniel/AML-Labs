@@ -175,6 +175,44 @@ To upload the docker file to Azure, we just have to create a Web Service for Con
 
 4. After setting up the service, wait some time (depending on model size) until it is ready. Now you can call it via HTTP. You can use this [Jupyter notebook](titanic-classify.ipynb) to guide you through the call.
 
+    ```python
+    import requests
+    import json
+    
+    web_service_url = "YOUR WEB SERVICE URL HERE, e.g.: http://awesomecontainer.azurewebsites.net"
+    
+    def get_result(data):
+        body = str.encode(json.dumps(data))
+
+        url = '{}/score'.format(web_service_url)
+        
+        # api_key = 'your service key' 
+        headers = {'Content-Type':'application/json'}
+
+        resp = requests.post(url, data, headers=headers)
+        return resp.text
+
+    pclass = 1
+    sibsp = 1
+    age = 29
+    fare = 200
+    sex = 1
+    parch = 0
+
+    data = { "input_df": [
+        {
+            "pclass": pclass,
+            "sibsp": sibsp,
+            "age": age,
+            "fare": fare,
+            "sex": sex,
+            "parch": parch
+        }
+    ]}
+
+    get_result_local(json.dumps(data))
+    ```
+
 5. [Optional]: Set the Always On option in the Application Settings of your App Service to "On". This way, the it is always ready and will not shut down, when unused.
 
 
