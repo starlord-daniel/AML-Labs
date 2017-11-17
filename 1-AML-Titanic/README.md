@@ -156,7 +156,7 @@ To publish the model, we have to perform these actions:
 5. After the preparation, you can create the real-time web service in one command:
 
     ```sql
-    az ml service create realtime -f score_iris.py --model-file model.pkl -s service_schema.json -n irisapp -r python --collect-model-data true
+    az ml service create realtime -f score.py --model-file model.pkl -s service_schema.json -n titanicapp -r python --collect-model-data true
     ```
     - after deployment, the service will provide you with options to call you service
 
