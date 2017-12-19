@@ -32,7 +32,7 @@ os.makedirs('./outputs', exist_ok=True)
 print('Python version: {}'.format(sys.version))
 print()
 
-# load Iris dataset from a DataPrep package as a pandas DataFrame
+# load Titanic dataset from a DataPrep package as a pandas DataFrame
 titanic_dataset = run('titanic-clear.dprep', dataflow_idx=0, spark=False)
 print ('Titanic dataset shape: {}'.format(titanic_dataset.shape))
 print(titanic_dataset.dtypes)
